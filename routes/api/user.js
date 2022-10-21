@@ -33,7 +33,7 @@ router.get("/users/:id", (req, res) => {
             //Editar Usuario
 router.put("/users/:id", (req, res) => {
   const { id } = req.params;
-  const { name,age,email,rol,sucursal,password}= req.body;
+  const { email,rol,sucursal,password}= req.body;
   userSchema
     .updateOne({_id:id},{ $set: {name, age,email,rol,sucursal,password}})
     .then((data) => res.json(data))

@@ -21,7 +21,7 @@ const userSchema = new mongoose.Schema({
   },
   rol: {
     type: String,
-    minlength: 5,
+    minlength: 10,
     maxlength: 255,
   },
   verified: {
